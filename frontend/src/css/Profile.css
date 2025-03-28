@@ -1,0 +1,32 @@
+.profile-info {
+	line-height: 2;
+	text-align: left;
+	padding: 16px;
+	background: var(--clr-gray200);
+	border-radius: var(--border-radius-s);
+	max-width: 70%;
+	margin: auto;
+}
+.profile-info .business-info {
+	width: unset;
+	text-align: left !important;
+	padding: unset !important;
+}
+
+.working-day {
+	display: flex;
+}
+.working-time {
+	flex-grow: 1;
+	/* align-content: end; */
+	text-align: end;
+}
+
+
+@media (max-width: 768px) {
+  .profile-info {
+	
+		max-width: unset !important;
+
+	}
+}

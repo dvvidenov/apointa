@@ -1,0 +1,128 @@
+.register {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  display: block;
+  color: var(--primary-color);
+}
+.register-input .business-info {
+	text-align: center;
+
+	padding: 0px;
+}
+.register-info {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+
+.register-input h4 {
+	color: var(--primary-color);
+	margin: 1em 0;
+}
+/* textarea, input {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	display: block;
+	background: white;
+	border-radius: 8px;
+	color: var(--primary-color);
+} */
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 10%;
+}
+
+.register-input {
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	/* width: min-content; */
+	padding: 1rem;
+	/* margin: auto; */
+	border-radius: 0px 0px 15px 15px;
+	min-width: 50%;
+}
+.error-label {
+  color: red;
+  background: #ff00004a;
+  /* margin: 10px; */
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: none;
+}
+.active-content {
+  display: block;
+}
+
+.tabs {
+  width: 50%;
+}
+
+.tabs button {
+	border-radius: 15px 15px 0px 0px;
+	color: var(--primary-color);
+	background: white;
+	margin: unset !important;
+}
+.tab.active-tab {
+  background: white;
+  border-bottom-left-radius: 0px;
+  border-radius: 15px 15px 0px 0px;
+  z-index: 1;
+  position: relative;
+}
+
+.tabs button:hover {
+  border: unset;
+  outline: unset;
+}
+
+.tab.active-tab:hover {
+  border: unset;
+  outline: unset;
+}
+.devider {
+  border: 1px solid #0000002b;
+  margin: 10px 32px;
+}
+.register-btn.primary-button {
+	max-width: 30%;
+}
+@media (max-width: 768px) {
+  .register-input {
+    width: 85%;
+  }
+  .register-btn.primary-button {
+    max-width: 40% !important;
+  }
+  input {
+    color: var(--primary-color);
+  }
+  input:focus {
+    border: var(--primary-border);
+    outline: unset;
+  }
+  .register-info {
+    display: unset !important;
+  }
+}

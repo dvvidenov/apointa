@@ -1,0 +1,1253 @@
+{
+  "data": [
+    {
+      "bulstat": "642872138807",
+      "userId": 1,
+      "name": "Little-Gleichner",
+      "categoriesId": 1,
+      "address": "2027 Von Trail\nLittleland, IN 64927",
+      "phone": "+1-850-275-1375",
+      "email": "johnston.edmond@hotmail.com",
+      "city": "New Kacey",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 5,
+          "userId": 11,
+          "name": "Ulices Jakubowski IV",
+          "businessBulstat": "642872138807",
+          "status": "vacation"
+        }
+      ]
+    },
+    {
+      "bulstat": "326486488585",
+      "userId": 2,
+      "name": "Goldner-Bergnaum",
+      "categoriesId": 2,
+      "address": "177 Roob Route\nNew Magali, UT 55299-8107",
+      "phone": "+1.928.215.6412",
+      "email": "murphy.halvorson@gmail.com",
+      "city": "New Cheyennefurt",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "581041372409",
+      "userId": 3,
+      "name": "Sawayn LLC",
+      "categoriesId": 1,
+      "address": "333 Elwin Ford Suite 175\nNorth Vern, DC 39667-9429",
+      "phone": "(906) 568-0191",
+      "email": "crooks.lafayette@stanton.com",
+      "city": "Schmelermouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "986110032911",
+      "userId": 4,
+      "name": "Block PLC",
+      "categoriesId": 1,
+      "address": "8744 Simonis Mountains Apt. 152\nLake Opalmouth, ID 40416",
+      "phone": "1-815-497-5361",
+      "email": "spinka.issac@gmail.com",
+      "city": "West Marcelo",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 7,
+          "userId": 92,
+          "name": "Janae Johnson",
+          "businessBulstat": "986110032911",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "194472252030",
+      "userId": 5,
+      "name": "Ward, Yundt and Johnson",
+      "categoriesId": 1,
+      "address": "566 Wolff Views\nIsabelletown, PA 35812-0881",
+      "phone": "630-916-7918",
+      "email": "fay.alexandre@howell.com",
+      "city": "Port Goldatown",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": [
+        {
+          "id": 3,
+          "userId": 67,
+          "name": "Miss Velda Smith V",
+          "businessBulstat": "194472252030",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "888558941041",
+      "userId": 6,
+      "name": "Dare-Roob",
+      "categoriesId": 2,
+      "address": "67892 Rebeca Mountain\nEribertoberg, NV 43909",
+      "phone": "(781) 747-5509",
+      "email": "adaline01@ziemann.com",
+      "city": "Chelsieland",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "928956218351",
+      "userId": 7,
+      "name": "Kirlin-Bergnaum",
+      "categoriesId": 2,
+      "address": "182 Boyer River\nSouth Leonardo, MS 14158",
+      "phone": "(412) 695-7889",
+      "email": "braun.everette@lemke.net",
+      "city": "Suzanneberg",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "894316642331",
+      "userId": 8,
+      "name": "Okuneva Ltd",
+      "categoriesId": 2,
+      "address": "77330 Crooks Stream Apt. 184\nWest Jordanefort, OH 34602-5090",
+      "phone": "(930) 991-9794",
+      "email": "abbott.duncan@yahoo.com",
+      "city": "Brownbury",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "407655308737",
+      "userId": 9,
+      "name": "Streich-Weimann",
+      "categoriesId": 2,
+      "address": "728 Ladarius Trace\nMonahanhaven, AL 79432",
+      "phone": "651.847.0689",
+      "email": "madisyn85@hotmail.com",
+      "city": "Earleneborough",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "214786506810",
+      "userId": 10,
+      "name": "Kiehn and Sons",
+      "categoriesId": 1,
+      "address": "14785 VonRueden Cliff Suite 577\nSouth Nicoletteberg, OH 39810",
+      "phone": "1-580-249-4498",
+      "email": "auer.marjolaine@romaguera.biz",
+      "city": "Hintzhaven",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 17,
+          "userId": 61,
+          "name": "Jordan Stanton",
+          "businessBulstat": "214786506810",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "336557898713",
+      "userId": 11,
+      "name": "Hoeger and Sons",
+      "categoriesId": 2,
+      "address": "26013 Sigurd Isle\nGrahamhaven, TX 72210",
+      "phone": "951-667-5001",
+      "email": "whitney.crona@gmail.com",
+      "city": "North Jakob",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 6,
+          "userId": 95,
+          "name": "Cordell Predovic",
+          "businessBulstat": "336557898713",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "912533641661",
+      "userId": 12,
+      "name": "Will-Waelchi",
+      "categoriesId": 2,
+      "address": "309 Cormier Ridges Apt. 207\nEast Beth, ID 19035-7576",
+      "phone": "702.784.4998",
+      "email": "kelton44@gmail.com",
+      "city": "Mayerland",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "520156644845",
+      "userId": 13,
+      "name": "Buckridge and Sons",
+      "categoriesId": 1,
+      "address": "82110 Abbey Port Apt. 736\nEmmetville, RI 44078-8860",
+      "phone": "423.723.5490",
+      "email": "cummerata.josue@yahoo.com",
+      "city": "Reannahaven",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "348095604443",
+      "userId": 14,
+      "name": "Davis-Kerluke",
+      "categoriesId": 2,
+      "address": "778 Brekke Village Suite 430\nRowlandmouth, MT 76052",
+      "phone": "339.902.9733",
+      "email": "qbernier@hoeger.org",
+      "city": "North Cydney",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": [
+        {
+          "id": 18,
+          "userId": 48,
+          "name": "Evert Keebler",
+          "businessBulstat": "348095604443",
+          "status": "sick"
+        }
+      ]
+    },
+    {
+      "bulstat": "450879832211",
+      "userId": 15,
+      "name": "Hane, Wintheiser and Bruen",
+      "categoriesId": 1,
+      "address": "471 Hackett Lakes\nAufderharville, MD 47010-5112",
+      "phone": "+16148616492",
+      "email": "conn.kelsi@gmail.com",
+      "city": "Port Marcelluston",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "308553181549",
+      "userId": 16,
+      "name": "Jerde Group",
+      "categoriesId": 2,
+      "address": "35780 Hermann Garden\nSouth Furman, NC 00594",
+      "phone": "+1-531-300-0213",
+      "email": "garnet23@yahoo.com",
+      "city": "Watersfort",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "058289806074",
+      "userId": 17,
+      "name": "Brakus-Grimes",
+      "categoriesId": 1,
+      "address": "126 Baumbach Manor Suite 194\nSouth Harley, SD 30148-5136",
+      "phone": "+1-667-895-6571",
+      "email": "rutherford.maybelle@gmail.com",
+      "city": "Lake Porterview",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "651356284009",
+      "userId": 18,
+      "name": "Satterfield, Effertz and Smitham",
+      "categoriesId": 2,
+      "address": "622 Jalon Trafficway Suite 418\nWest Maude, MA 12618-8262",
+      "phone": "(847) 745-7818",
+      "email": "wferry@abshire.info",
+      "city": "Alexandriamouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "026654458814",
+      "userId": 19,
+      "name": "Schmidt-Daugherty",
+      "categoriesId": 1,
+      "address": "7207 Shanie Point\nDelbertville, WA 95405-1860",
+      "phone": "1-928-490-2208",
+      "email": "rzemlak@yahoo.com",
+      "city": "East Amyaburgh",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": [
+        {
+          "id": 16,
+          "userId": 107,
+          "name": "Augustine Feil DVM",
+          "businessBulstat": "026654458814",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "440933326103",
+      "userId": 20,
+      "name": "Treutel LLC",
+      "categoriesId": 1,
+      "address": "66653 Reichert Common\nPort Carleyborough, HI 29849",
+      "phone": "732-321-1096",
+      "email": "heathcote.emory@yahoo.com",
+      "city": "North Ryanshire",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "592166375272",
+      "userId": 21,
+      "name": "Rippin-Koepp",
+      "categoriesId": 2,
+      "address": "196 Jeanne Mews Apt. 400\nKonopelskiside, OK 28481",
+      "phone": "+1-520-355-7158",
+      "email": "itorphy@goodwin.com",
+      "city": "Lilianberg",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "427008707216",
+      "userId": 22,
+      "name": "Dietrich-Johns",
+      "categoriesId": 1,
+      "address": "853 Josefa Plains\nNew Moses, ID 76734-5379",
+      "phone": "347.432.1440",
+      "email": "cydney.lubowitz@hotmail.com",
+      "city": "West Russel",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "111794664819",
+      "userId": 23,
+      "name": "Purdy PLC",
+      "categoriesId": 1,
+      "address": "33898 Rutherford Motorway Suite 536\nDickifort, WY 16993-3425",
+      "phone": "860.584.3695",
+      "email": "koepp.angus@oreilly.biz",
+      "city": "Mariannafurt",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "576623902798",
+      "userId": 24,
+      "name": "Marks Inc",
+      "categoriesId": 2,
+      "address": "6089 Pagac Mountains\nTinaview, NY 23178-3259",
+      "phone": "480-414-5995",
+      "email": "sstoltenberg@yahoo.com",
+      "city": "Quitzonshire",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "480839313531",
+      "userId": 25,
+      "name": "Upton LLC",
+      "categoriesId": 2,
+      "address": "726 Miller Light Suite 115\nPort Enabury, MD 58377",
+      "phone": "878-645-7953",
+      "email": "holden.kautzer@gmail.com",
+      "city": "North Jeniferland",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "599274557657",
+      "userId": 26,
+      "name": "Flatley-Collins",
+      "categoriesId": 1,
+      "address": "268 Andreane Islands\nCassinton, WA 76099",
+      "phone": "940.994.7490",
+      "email": "isaias36@miller.org",
+      "city": "Cathrineburgh",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "484722642795",
+      "userId": 27,
+      "name": "Wisozk Group",
+      "categoriesId": 1,
+      "address": "8530 Timothy Rapid Suite 215\nHirtheburgh, FL 22283",
+      "phone": "(920) 992-1167",
+      "email": "ypfeffer@predovic.com",
+      "city": "New Rylee",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 13,
+          "userId": 61,
+          "name": "Jordan Stanton",
+          "businessBulstat": "484722642795",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "584207629947",
+      "userId": 28,
+      "name": "O'Conner Inc",
+      "categoriesId": 1,
+      "address": "3801 Spencer Junction Apt. 555\nKemmerville, WI 11248",
+      "phone": "1-512-892-9595",
+      "email": "parker.zoe@tromp.com",
+      "city": "West Darius",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "271037805832",
+      "userId": 29,
+      "name": "Rippin, Ankunding and Kuhlman",
+      "categoriesId": 2,
+      "address": "534 Bartoletti Bypass Suite 128\nNew Beaulahland, KS 80644-7325",
+      "phone": "(564) 389-9513",
+      "email": "gunner.raynor@hotmail.com",
+      "city": "Jakubowskiton",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "346870493526",
+      "userId": 30,
+      "name": "Romaguera Ltd",
+      "categoriesId": 2,
+      "address": "3501 Alta Fields Suite 231\nBartholomemouth, UT 47616-0739",
+      "phone": "973.939.2575",
+      "email": "pauline00@hotmail.com",
+      "city": "Lake Dahlia",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "372788620930",
+      "userId": 31,
+      "name": "Beatty, Ziemann and Effertz",
+      "categoriesId": 1,
+      "address": "54621 Amy Loaf Suite 763\nPort Vance, OH 28585",
+      "phone": "1-270-444-6594",
+      "email": "dangelo92@ward.com",
+      "city": "Leilanimouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": [
+        {
+          "id": 10,
+          "userId": 70,
+          "name": "Dr. Jamel Jast IV",
+          "businessBulstat": "372788620930",
+          "status": "sick"
+        }
+      ]
+    },
+    {
+      "bulstat": "609787348477",
+      "userId": 32,
+      "name": "Parisian and Sons",
+      "categoriesId": 2,
+      "address": "51562 Adrien Corners\nSouth Zoeview, OH 88418-8936",
+      "phone": "585-466-8919",
+      "email": "lorenzo01@hamill.biz",
+      "city": "Friedaview",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 14,
+          "userId": 62,
+          "name": "Mallie Kautzer",
+          "businessBulstat": "609787348477",
+          "status": "vacation"
+        },
+        {
+          "id": 20,
+          "userId": 14,
+          "name": "Ms. Chanel Cole",
+          "businessBulstat": "609787348477",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "217898236515",
+      "userId": 83,
+      "name": "Fisher-Watsica",
+      "categoriesId": 1,
+      "address": "4406 Ayana Well\nNorth Gailland, IL 95803",
+      "phone": "+1-401-428-0725",
+      "email": "boyer.delaney@stoltenberg.net",
+      "city": "Lake Wendy",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 4,
+          "userId": 14,
+          "name": "Ms. Chanel Cole",
+          "businessBulstat": "217898236515",
+          "status": "sick"
+        }
+      ]
+    },
+    {
+      "bulstat": "414823070837",
+      "userId": 84,
+      "name": "Reinger Group",
+      "categoriesId": 2,
+      "address": "4349 Alessandro Village\nPort Nat, MT 58872",
+      "phone": "(805) 690-9931",
+      "email": "aheller@yahoo.com",
+      "city": "Durganmouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "016845900718",
+      "userId": 85,
+      "name": "Donnelly, McGlynn and Wehner",
+      "categoriesId": 2,
+      "address": "687 Kertzmann Place Apt. 366\nNorth Isabellmouth, AL 98222",
+      "phone": "+1 (947) 413-0915",
+      "email": "jmertz@bartoletti.org",
+      "city": "Quitzonmouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 1,
+          "businessBulstat": "016845900718",
+          "name": "qui",
+          "price": "137.00",
+          "duration": 64
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "406803620034",
+      "userId": 86,
+      "name": "Johnson-Macejkovic",
+      "categoriesId": 1,
+      "address": "90991 Alaina Turnpike\nFosterport, DE 53276",
+      "phone": "(682) 292-2495",
+      "email": "nondricka@smith.org",
+      "city": "South Corrine",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 2,
+          "businessBulstat": "406803620034",
+          "name": "sit",
+          "price": "51.00",
+          "duration": 37
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "445368185177",
+      "userId": 87,
+      "name": "Adams Ltd",
+      "categoriesId": 2,
+      "address": "52449 Mariah Burg\nSouth Kraigbury, ID 03854-1825",
+      "phone": "859.391.3289",
+      "email": "phagenes@sanford.com",
+      "city": "North Vitamouth",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 3,
+          "businessBulstat": "445368185177",
+          "name": "omnis",
+          "price": "160.00",
+          "duration": 165
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "763073130932",
+      "userId": 88,
+      "name": "Bahringer-Rice",
+      "categoriesId": 1,
+      "address": "93995 Nikolaus Fall Suite 119\nWest Sandra, MN 85200",
+      "phone": "+1 (769) 278-2441",
+      "email": "josie69@gottlieb.info",
+      "city": "Lowechester",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "519126360784",
+      "userId": 89,
+      "name": "Hartmann, Dicki and Shanahan",
+      "categoriesId": 1,
+      "address": "279 Bode Pike\nNew Aiyanabury, CO 47825",
+      "phone": "669-893-2538",
+      "email": "irma.wuckert@schinner.com",
+      "city": "Muellerton",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 4,
+          "businessBulstat": "519126360784",
+          "name": "et",
+          "price": "83.00",
+          "duration": 128
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "770820839249",
+      "userId": 90,
+      "name": "Zemlak-Wolf",
+      "categoriesId": 1,
+      "address": "19025 Pfeffer Pass\nHaileyton, NC 85158-2352",
+      "phone": "(743) 313-6129",
+      "email": "kolby.hills@yahoo.com",
+      "city": "Malindaborough",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "343524835815",
+      "userId": 91,
+      "name": "Dickinson Ltd",
+      "categoriesId": 1,
+      "address": "17054 Sanford Shore Suite 342\nEvelynshire, MS 88308-8762",
+      "phone": "947-570-2279",
+      "email": "collin.heidenreich@gmail.com",
+      "city": "New Frederic",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 5,
+          "businessBulstat": "343524835815",
+          "name": "qui",
+          "price": "50.00",
+          "duration": 101
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "079622208142",
+      "userId": 92,
+      "name": "Herman-Parker",
+      "categoriesId": 2,
+      "address": "3483 Kuhn Junctions Suite 316\nSouth Larryburgh, NM 98396-6586",
+      "phone": "+19738677149",
+      "email": "marty23@gmail.com",
+      "city": "North Kari",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 6,
+          "businessBulstat": "079622208142",
+          "name": "nemo",
+          "price": "40.00",
+          "duration": 72
+        }
+      ],
+      "employee": [
+        {
+          "id": 8,
+          "userId": 81,
+          "name": "Arturo Thiel",
+          "businessBulstat": "079622208142",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "163218346820",
+      "userId": 93,
+      "name": "Yundt, Kilback and Kunde",
+      "categoriesId": 2,
+      "address": "3954 Vicente Ramp Apt. 531\nEast Jettbury, TX 54700",
+      "phone": "731-825-4908",
+      "email": "maybell59@yahoo.com",
+      "city": "Harberfort",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "978035483624",
+      "userId": 94,
+      "name": "Ruecker, Marvin and Berge",
+      "categoriesId": 2,
+      "address": "20181 Streich Gateway\nMetzburgh, DC 71745",
+      "phone": "1-458-567-5016",
+      "email": "armando80@gmail.com",
+      "city": "Dorisborough",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 7,
+          "businessBulstat": "978035483624",
+          "name": "ut",
+          "price": "197.00",
+          "duration": 65
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "464450843599",
+      "userId": 95,
+      "name": "Schuster, Hammes and Stracke",
+      "categoriesId": 1,
+      "address": "766 Effie Run\nNorth Vicentaton, UT 26796",
+      "phone": "781-903-9791",
+      "email": "iquigley@wyman.net",
+      "city": "Stacymouth",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "142074922697",
+      "userId": 96,
+      "name": "Crooks and Sons",
+      "categoriesId": 2,
+      "address": "3059 Tracy Drives Suite 357\nPort Marta, NV 64361-8579",
+      "phone": "+18056953719",
+      "email": "kirlin.anibal@hotmail.com",
+      "city": "Jasttown",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 8,
+          "businessBulstat": "142074922697",
+          "name": "totam",
+          "price": "35.00",
+          "duration": 91
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "114916922088",
+      "userId": 97,
+      "name": "Wilderman and Sons",
+      "categoriesId": 1,
+      "address": "7312 Smith Shoal\nSylvesterberg, MD 05972-5022",
+      "phone": "+12695497263",
+      "email": "murphy.theodore@borer.com",
+      "city": "Cummeratafurt",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "691801843739",
+      "userId": 98,
+      "name": "Feeney PLC",
+      "categoriesId": 2,
+      "address": "293 Madyson Hill Suite 527\nWest Elliot, IA 78985",
+      "phone": "929.588.5727",
+      "email": "hahn.estell@robel.com",
+      "city": "Berniershire",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 15,
+          "userId": 93,
+          "name": "Bernadine Rosenbaum",
+          "businessBulstat": "691801843739",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "892088586776",
+      "userId": 99,
+      "name": "Crona-Bode",
+      "categoriesId": 2,
+      "address": "9693 Johnson Light Suite 443\nLake Cordelia, ME 27084",
+      "phone": "+1-816-566-4031",
+      "email": "njenkins@lind.com",
+      "city": "West Christelle",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 9,
+          "businessBulstat": "892088586776",
+          "name": "dolores",
+          "price": "192.00",
+          "duration": 132
+        }
+      ],
+      "employee": [
+        {
+          "id": 9,
+          "userId": 52,
+          "name": "Miss Mazie Robel",
+          "businessBulstat": "892088586776",
+          "status": "vacation"
+        }
+      ]
+    },
+    {
+      "bulstat": "785978908241",
+      "userId": 100,
+      "name": "Rowe-Pollich",
+      "categoriesId": 1,
+      "address": "9515 Clementina Walks\nWest Stevieshire, AR 41024",
+      "phone": "+1.501.975.0659",
+      "email": "floyd04@gmail.com",
+      "city": "Mannview",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [],
+      "employee": []
+    },
+    {
+      "bulstat": "482614511124",
+      "userId": 101,
+      "name": "Bergstrom, Jast and Jacobson",
+      "categoriesId": 2,
+      "address": "482 Brigitte Plaza\nDareshire, AK 40145-3577",
+      "phone": "+1-505-257-9250",
+      "email": "murray.amir@schimmel.com",
+      "city": "New Renee",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 10,
+          "businessBulstat": "482614511124",
+          "name": "esse",
+          "price": "140.00",
+          "duration": 39
+        }
+      ],
+      "employee": [
+        {
+          "id": 12,
+          "userId": 109,
+          "name": "Onie Harber",
+          "businessBulstat": "482614511124",
+          "status": "vacation"
+        }
+      ]
+    },
+    {
+      "bulstat": "756071561347",
+      "userId": 102,
+      "name": "Welch Inc",
+      "categoriesId": 1,
+      "address": "9486 Stamm Union Suite 301\nNorth Meredithborough, ND 57544-1785",
+      "phone": "520-253-2025",
+      "email": "arnoldo.leffler@hotmail.com",
+      "city": "Port Casper",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [],
+      "employee": [
+        {
+          "id": 1,
+          "userId": 52,
+          "name": "Miss Mazie Robel",
+          "businessBulstat": "756071561347",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "579148894815",
+      "userId": 103,
+      "name": "Hyatt-Hudson",
+      "categoriesId": 2,
+      "address": "32571 Zechariah Parks\nSouth Raoulstad, UT 62003-6581",
+      "phone": "+1.567.979.7719",
+      "email": "phyllis.macejkovic@hotmail.com",
+      "city": "Allenfort",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 11,
+          "businessBulstat": "579148894815",
+          "name": "dolore",
+          "price": "76.00",
+          "duration": 69
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "822489258415",
+      "userId": 104,
+      "name": "Batz, Dooley and Raynor",
+      "categoriesId": 1,
+      "address": "33874 Abby Run Apt. 335\nHayleetown, AL 68578-6933",
+      "phone": "(612) 887-0701",
+      "email": "dannie50@gmail.com",
+      "city": "Wehnerstad",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 12,
+          "businessBulstat": "822489258415",
+          "name": "omnis",
+          "price": "129.00",
+          "duration": 44
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "958419111009",
+      "userId": 105,
+      "name": "Sporer, Cassin and Brown",
+      "categoriesId": 2,
+      "address": "49607 Kaylie Rue Apt. 626\nPort Shannon, CA 82552-6158",
+      "phone": "+14586912176",
+      "email": "bhauck@rempel.com",
+      "city": "West Kareem",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 13,
+          "businessBulstat": "958419111009",
+          "name": "atque",
+          "price": "90.00",
+          "duration": 46
+        }
+      ],
+      "employee": [
+        {
+          "id": 11,
+          "userId": 100,
+          "name": "Maudie Lindgren",
+          "businessBulstat": "958419111009",
+          "status": "sick"
+        }
+      ]
+    },
+    {
+      "bulstat": "606129015931",
+      "userId": 106,
+      "name": "Bosco-Wiegand",
+      "categoriesId": 1,
+      "address": "549 Gudrun Forest Apt. 693\nBednarshire, ND 87720",
+      "phone": "(669) 519-6311",
+      "email": "carlotta.wintheiser@gutmann.com",
+      "city": "South Viviennefurt",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 14,
+          "businessBulstat": "606129015931",
+          "name": "laboriosam",
+          "price": "125.00",
+          "duration": 178
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "614968374473",
+      "userId": 107,
+      "name": "Carter Group",
+      "categoriesId": 1,
+      "address": "226 Jerad Creek Suite 249\nClaudieview, MT 41204-1870",
+      "phone": "(757) 582-2395",
+      "email": "terry.floy@wilderman.com",
+      "city": "New Anitashire",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 15,
+          "businessBulstat": "614968374473",
+          "name": "rem",
+          "price": "76.00",
+          "duration": 89
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "364183231833",
+      "userId": 108,
+      "name": "Ferry PLC",
+      "categoriesId": 2,
+      "address": "488 Nick Brook Suite 937\nNew Meggie, MI 67433",
+      "phone": "551-343-8261",
+      "email": "tschumm@gmail.com",
+      "city": "Maeshire",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 16,
+          "businessBulstat": "364183231833",
+          "name": "quos",
+          "price": "149.00",
+          "duration": 84
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "250564977720",
+      "userId": 109,
+      "name": "Boehm PLC",
+      "categoriesId": 2,
+      "address": "396 Hermann Lodge\nWeissnatmouth, OH 68377-1498",
+      "phone": "+1-986-483-8883",
+      "email": "kdavis@hotmail.com",
+      "city": "Mannport",
+      "status": false,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 17,
+          "businessBulstat": "250564977720",
+          "name": "in",
+          "price": "100.00",
+          "duration": 86
+        }
+      ],
+      "employee": [
+        {
+          "id": 19,
+          "userId": 56,
+          "name": "Patricia Vandervort",
+          "businessBulstat": "250564977720",
+          "status": "working"
+        }
+      ]
+    },
+    {
+      "bulstat": "085600423905",
+      "userId": 110,
+      "name": "Frami, Cole and Daniel",
+      "categoriesId": 2,
+      "address": "25894 Alana Ridges\nKrystinaberg, AL 37541",
+      "phone": "(626) 479-1042",
+      "email": "austyn.leuschke@yahoo.com",
+      "city": "North Blaze",
+      "status": true,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 18,
+          "businessBulstat": "085600423905",
+          "name": "at",
+          "price": "130.00",
+          "duration": 93
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "434589018245",
+      "userId": 111,
+      "name": "Kulas-Ruecker",
+      "categoriesId": 2,
+      "address": "8064 Kuhlman Track\nJohnsonhaven, MS 11427-4431",
+      "phone": "1-458-390-0314",
+      "email": "cristina80@gmail.com",
+      "city": "Cameronbury",
+      "status": true,
+      "workingHours": null,
+      "posPayment": true,
+      "services": [
+        {
+          "id": 19,
+          "businessBulstat": "434589018245",
+          "name": "et",
+          "price": "125.00",
+          "duration": 130
+        }
+      ],
+      "employee": []
+    },
+    {
+      "bulstat": "694614333219",
+      "userId": 112,
+      "name": "Dach and Sons",
+      "categoriesId": 2,
+      "address": "42233 White Inlet\nEast Emile, MS 73073-7074",
+      "phone": "1-725-884-2983",
+      "email": "antonina14@lockman.biz",
+      "city": "Gottliebfurt",
+      "status": false,
+      "workingHours": null,
+      "posPayment": false,
+      "services": [
+        {
+          "id": 20,
+          "businessBulstat": "694614333219",
+          "name": "accusamus",
+          "price": "113.00",
+          "duration": 191
+        }
+      ],
+      "employee": [
+        {
+          "id": 2,
+          "userId": 107,
+          "name": "Augustine Feil DVM",
+          "businessBulstat": "694614333219",
+          "status": "sick"
+        }
+      ]
+    }
+  ]
+}

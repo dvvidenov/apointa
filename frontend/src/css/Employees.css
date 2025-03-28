@@ -1,0 +1,28 @@
+.p-button {
+	padding: 10px;
+	border-radius: var(--border-radius-l);
+	width: fit-content;
+	/* float: left; */
+	text-decoration: underline;
+	color: var(--primary-color);
+}
+.employee-tb {
+  margin: 2rem;
+}
+.employee-data {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.employee-info {
+	/* width: ; */
+	max-width: 80%;
+	margin: auto;
+}
+.employee-info form {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: inherit; */
+	align-content: \\;
+	align-items: center;
+}

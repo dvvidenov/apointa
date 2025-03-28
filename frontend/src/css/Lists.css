@@ -1,0 +1,23 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 16px;
+	/* width: fit-content; */
+	box-shadow: 0 5px 10px var(--clr-gray300);
+	/* margin: auto; */
+	background: var(--clr-gray150);
+	position: relative;
+	/* width: 100%; */
+	max-width: 70%;
+	margin: 3em auto;
+}
+
+
+@media (max-width: 768px) {
+  .list {
+    
+    max-width: unset !important;
+   
+  }
+}

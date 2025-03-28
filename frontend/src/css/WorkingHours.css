@@ -1,0 +1,54 @@
+.day-input {
+	display: flex;
+	gap: 8%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.day-of-week {
+	width: 100%;
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	color: var(--primary-color);
+}
+.each-day {
+	background: var(--clr-gray150);
+	margin: 10px 0px;
+	padding: 0px 16px;
+	border-radius: var(--border-radius-s);
+}
+.day-input > input:disabled {
+	background-color: #f0f0f0;
+	color: #ccc;
+	cursor: not-allowed;
+}
+.week-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .day-input {
+    display: unset !important;
+  }
+  .day-input > input {
+    text-align: center;
+  }
+  .each-day {
+ 
+    width: 100% !important;
+  }
+  
+  .day-off  {
+    display: block ruby;
+    align-content: baseline;
+    text-align: center;
+
+  }
+  .day-off input {
+    width: 38px;
+  }
+}

@@ -1,0 +1,25 @@
+svg {
+  fill: currentColor;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+.site-container {
+	margin: 8em;
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.spinner .spinner-gradient-stop {
+  stop-color: var(--primary-color);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

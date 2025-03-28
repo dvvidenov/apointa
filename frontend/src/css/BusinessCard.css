@@ -1,0 +1,168 @@
+
+
+.business-poster img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.business-info {
+	text-align: left;
+	flex-grow: 1;
+	padding: 16px;
+}
+.business-card {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 30px;
+	
+	max-width: 70%;
+	margin: auto;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.businesses-infos {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-direction: row;
+  margin-top: 6rem;
+}
+h3{
+  width: 100%;
+}
+.business-about {
+	border-right: 1px solid var(--clr-gray300);
+	max-width: 50%;
+}
+.businesses-infos > div {
+	padding: 18px;
+
+}
+.details {
+	margin: auto;
+	width: 70%;
+}
+
+.business-text {
+	text-align: left;
+	/* margin: unset; */
+	margin-top: 1rem;
+}
+.businesses-grid {
+	gap: 2rem;
+	display: grid;
+
+}
+
+.wrapper .info {
+	flex-grow: 1;
+	text-align: left;
+}
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid;
+}
+
+.wrapper .control a {
+  background-color: rgb(169, 107, 228);
+	padding: 0 1rem;
+	border-radius: 10px;
+  color: white
+}
+.business-poster {
+	/* width: 200px; */
+	height: 200px;
+}
+
+
+.business-info .info {
+	color: var(--clr-gray500);
+}
+
+.business-working-hours .each-day {
+  display: flex;
+  background: unset !important;
+
+}
+.business-working-hours .working-time {
+	flex-grow: 1;
+	text-align: right;
+}
+
+.home .address {
+	color: var(--clr-gray500);
+	/* text-decoration: underline; */
+	border-bottom: 1px solid var(--clr-gray300);
+	line-height: 37px;
+}
+.home .wrapper {
+	border-bottom: unset !important;
+}
+.home  .wrapper .info {
+	display: flex;
+	justify-self: flex-end;
+	justify-content: space-between;
+}
+.home  .wrapper  .title {
+	flex-wrap: wrap-reverse;
+	width: 68%;
+}
+.details .business-info {
+	padding: unset !important;
+	color: var(--primary-color);
+}
+.details .business-card{
+	box-shadow: unset !important;
+	max-width: unset !important;
+	margin-bottom: 3em;
+}
+.business-working-hours {
+	flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .details {
+    margin: auto;
+    width: unset !important;
+  }
+	
+  .business-card {
+    justify-content: center;
+    max-width: unset !important;
+  }
+  .business-info {
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .business-poster img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-l);
+    margin: 6% auto;
+  }
+	.home .wrapper {
+		padding: 1rem 0;
+	}
+
+  .business-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+  .businesses-infos {
+   
+    flex-direction: column;
+  }
+  .business-about {
+    border-right: unset !important;
+		max-width: unset !important;
+		
+  }
+  .home .business-title,
+  .home .business-info {
+    text-align: center;
+    padding: 16px;
+  }
+  
+}

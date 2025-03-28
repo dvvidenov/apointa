@@ -1,0 +1,19 @@
+.about-us {
+	padding: 16px;
+	text-align: left;
+	max-width: 70%;
+	margin: auto;
+}
+.about-us-title {
+	text-align: center;
+	margin: 1em;
+}
+.about-us li {
+	margin-left: 1em;
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    max-width: unset !important;
+  }
+}

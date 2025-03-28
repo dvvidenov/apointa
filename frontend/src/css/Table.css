@@ -1,0 +1,160 @@
+/* colors */
+
+* {
+  --clr-primary: #81d4fa;
+  --clr-primary-light: #e1f5fe;
+  --clr-primary-dark: #4fc3f7;
+  --clr-gray100: #f9fbff;
+  --clr-gray150: #f4f6fb;
+  --clr-gray200: #eef1f6;
+  --clr-gray300: #e1e5ee;
+  --clr-gray400: #767b91;
+  --clr-gray500: #4f546c;
+  --clr-gray600: #2a324b;
+  --clr-gray700: #161d34;
+  --clr-not-active: #ffcdd2;
+  --clr-active: #b5ffb8c2;
+
+  --sm-radius: 0.2rem;
+}
+
+.table {
+  box-shadow: 0 5px 10px var(--clr-gray300);
+}
+.cell.working,
+.cell.active,
+.cell.\31 {
+  border-radius: var(--sm-radius);
+  background: var(--clr-active);
+  padding: 8px;
+}
+
+.cell.not-active {
+  border-radius: var(--sm-radius);
+  background: var(--clr-not-active);
+  padding: 8px;
+}
+.table {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
+
+.table.\33 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.table.\34 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.table.\35 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.table.appointments {
+  grid-template-columns: repeat(8, 1fr);
+}
+.table-row {
+  display: contents;
+}
+
+.cell {
+  color: var(--primary-color);
+  padding: 8px;
+  background-color: var(--clr-gray100);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid var(--clr-gray200);
+}
+
+.table-header .cell {
+  font-weight: bold;
+  background-color: var(--clr-gray300);
+}
+
+.table a {
+  display: contents;
+}
+.cell.false,
+.cell.sick {
+  background: var(--clr-not-active);
+}
+@media (max-width: 768px) {
+  .table.appointments {
+    grid-template-columns: 1fr;
+  }
+
+  /* .table-row {
+    box-shadow: 0 5px 10px var(--clr-gray300);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "box-1 box-1"
+      "box-2 box-2"
+      "box-3 box-3"
+      "box-4 box-7"
+      "box-6 box-5"
+      "box-8 box-8";
+  } */
+
+  .cell {
+    display: block;
+    justify-content: space-between;
+    position: relative;
+    border: none;
+    background: none;
+  }
+  .box-1 {
+    grid-area: box-1;
+    background: var(--accent-color);
+    border-top-left-radius: var(--border-radius-l);
+  }
+  .box-2 {
+    grid-area: box-2;
+  }
+  .box-3 {
+    grid-area: box-3;
+  }
+  .box-4 {
+    grid-area: box-4;
+  }
+  .box-5 {
+    grid-area: box-5;
+  }
+  .table.services .table-row {
+    grid-template-areas: "box-1 box-1 box-1 box-1" "box-2 box-2 box-3 box-4";
+  }
+  .table.employees .table-row {
+    grid-template-areas: "box-1 box-1 box-1 box-4 box-4" "box-2 box-2 box-2 box-3 box-3 ";
+  }
+  .update-service textarea {
+    /* height: auto; */
+    resize: vertical;
+    height: 12em !important;
+  }
+  .table-row {
+    display: grid;
+
+    grid-auto-rows: minmax(39px, auto);
+    line-height: 2em;
+    box-shadow: 0 5px 10px var(--clr-gray300);
+    width: 100%;
+    margin: 1em 0;
+    border-top-left-radius: var(--border-radius-l);
+    border-bottom-right-radius: var(--border-radius-l);
+  }
+  .table-header {
+    display: none !important;
+  }
+  .table {
+    display: unset;
+    box-shadow: unset;
+  }
+  .cell.false,
+  .cell.sick {
+    border-bottom-right-radius: var(--border-radius-l);
+  }
+  .cell.working,
+  .cell.\31 {
+    background: var(--clr-active);
+    border-bottom-right-radius: var(--border-radius-l);
+  }
+}

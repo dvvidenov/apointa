@@ -1,0 +1,79 @@
+.appointment-tb {
+	display: flex;
+	/* grid: dense; */
+	flex-direction: column;
+	text-align: left;
+}
+
+.appointment-info {
+	display: flex;
+	gap: 10px;
+	padding: 1em 0;
+	justify-content: space-between;
+}
+
+.inf .status {
+	width: fit-content;
+	padding: 1em;
+	background: var(--accent-color);
+	border-radius: var(--border-radius-l);
+	/* line-height: revert-layer; */
+	font-size: 11px;
+	position: absolute;
+	top: -2em;
+	right: 10px;
+}
+.final-order {
+	/* margin: 1em; */
+	line-height: 2em;
+	background: var(--clr-gray100);
+	width: 100%;
+	padding: 16px;
+	margin: auto;
+	border-radius: var(--border-radius-m);
+	margin-bottom: 1em;
+}
+
+.order-select {
+	/* width: 43%; */
+	width: 100%;
+	margin: 10px 0px;
+	padding: 12px;
+	border: 1px solid #ddd;
+}
+
+.appointment-details {
+	display: flex;
+	/* flex: auto; */
+	flex-direction: column;
+	gap: 1em;
+	text-align: left;
+	/* width: ; */
+	background: var(--clr-gray150);
+	padding: 16px;
+	border-radius: var(--border-radius-m);
+}
+
+.status.confirmed {
+	background: var(--clr-active);
+}
+
+.status.cancelled {
+	background: var(--clr-not-active);
+}
+.appointment-input {
+	max-width: 70%;
+	margin: auto;
+}
+
+@media (max-width: 768px) {
+  .appointment-input {
+		max-width: unset !important;
+		margin: auto;
+	}
+	.appointment-info span {
+		text-wrap: balance;
+	}
+}
+
+

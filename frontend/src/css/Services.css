@@ -1,0 +1,38 @@
+.control-section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.services {
+	flex-grow: 1;
+	margin-top: 3%;
+}
+
+
+
+.hide {
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.services summary {
+	color: var(--primary-color);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.update-service {
+	width: 50%;
+	margin: auto;
+}
+
+@media (max-width: 768px) {
+	.update-service {
+		
+		width: 81% !important;
+		margin: auto;
+	}
+}

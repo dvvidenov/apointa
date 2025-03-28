@@ -1,0 +1,11 @@
+.footer {
+	position: absolute;
+	bottom: -8%;
+	display: flex;
+	padding: 1rem;
+	justify-content: space-between;
+	/* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+	background-color: var(--primary-color);
+	border-radius: 8px 8px 0px 0px;
+	width: 100%;
+}

@@ -1,0 +1,230 @@
+* {
+  /* --primary-color: #8b5a2b;
+  --secondary-color: #d9a66b;
+  --accent-color: #f5e1a4;
+  --primary-border: 1px solid var(--primary-color); */
+  --primary-color: #231651;
+  --secondary-color: #d6fff6;
+  --accent-color: #ffcc00;
+
+  --primary-border: 1px solid var(--primary-color);
+  --border-radius-s: 8px;
+  --border-radius-m: 16px;
+  --border-radius-l: 24px;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: rgba(0, 0, 0, 0.87); */
+  background-color: #ffffff;
+  color: var(--primary-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html,
+body {
+  overflow-x: hidden;
+} */
+.main-content {
+  margin: 1rem;
+}
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #000000;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #000000;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+select {
+  /* width: 44%; */
+  /* gap: 10px; */
+  margin: 10px;
+  width: 20%;
+  padding: 8px;
+  border-radius: var(--border-radius-s);
+  background: white;
+  color: var(--primary-color);
+  /* display: flex; */
+  /* flex-direction: row; */
+  border: var(--primary-border);
+}
+@media (max-width: 768px) {
+  select {
+    width: 43%;
+  }
+
+  * {
+    font-size: 13px;
+  }
+}
+
+.primary-button {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.primary-button:hover {
+  color: var(--secondary-color);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--primary-color);
+  border: var(--primary-border);
+}
+
+.secondary-button:hover {
+  color: var(--secondary-color);
+}
+
+.home {
+  margin-bottom: 7rem;
+}
+.page-title {
+  margin-bottom: 1em;
+  color: var(--primary-color);
+}
+
+.chosen-button {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  width: unset;
+}
+button {
+  width: 50%;
+  align-self: center;
+  border-radius: 20px;
+  margin: 1em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+.field .input-label {
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: white;
+  width: fit-content;
+}
+.field-checkbox {
+	display: block ruby;
+}
+.field-checkbox,
+.field-image,
+.field-select {
+	margin: 1em 0;
+}
+.field-select .input{
+  width: 100%;
+  margin: 1em 0;
+}
+.field .react-datepicker-wrapper input{
+  text-align: center;
+}
+
+
+.field .input-label.error{
+  color: red;
+}
+.field .react-datepicker-wrapper input,
+.field-select .input,
+.field textarea.input,
+.field input[type="password"].input,
+.field input[type="text"].input,
+.field input[type="email"].input {
+  padding: 11px 10px;
+  border-radius: var(--border-radius-s);
+  background: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.day-input .field .input-label,
+.day-input .field .input:not(:disabled) {
+	background: var(--clr-gray150) !important;
+}
+
+.field > input:disabled {
+	background-color: #f0f0f0 !important;
+	color: #ccc;
+	cursor: not-allowed;
+}
+.field.calendar {
+	align-items: start;
+	margin-left: 10px;
+}
+.logo-tag {
+	color: var(--secondary-color);
+	flex-grow: 1;
+}
+
+.field .react-datepicker-wrapper input.error,
+.field-select .input.error,
+.field textarea.input.error,
+.field input[type="password"].input.error,
+.field input[type="text"].input.error,
+.field input[type="email"].input.error{
+  border:1px solid red;
+}
