@@ -25,8 +25,8 @@ class StoreBusinessRequest extends FormRequest
 
     return [
       'bulstat' => ['required', 'min:9', 'max:10', Rule::unique('businesses')->ignore($this->bulstat, 'bulstat')],
-      'user_id' => ['required', 'exists:users,id'],
-      'categories_id' => ['required', 'exists:categories,id',],
+      'user_id' => ['exists:users,id'],
+      'categories_id' => ['exists:categories,id',],
       'name' => ['required', Rule::unique('businesses')->ignore($this->name, 'name')],
       'address' => ['required', 'string', 'max:255'],
       'city' => ['required', 'string', 'max:255'],

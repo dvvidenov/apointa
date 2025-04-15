@@ -14,20 +14,21 @@ function Table({ labels, data, keys, link }) {
   const textMap = {
     'duration': 'минути',
     'price': 'лв.',
-    '1': 'aктивна',
+    true: 'aктивна',
     false: 'неактивна',
     'working': 'На работа',
     'sick': 'Болничен',
     'vacation': 'Отпуска'
   };
 
-
+  const dat = Array.isArray(data) ? data : [data];
+  if (dat.length === 0) { return <div className="no-data">Няма данни</div> }
   return (
     <div className={`table ${link} ${keys.length}`}>
 
       {tableHeader}
 
-      {data.map(d =>
+      {dat?.map(d =>
         <Link key={d.id} to={`/${link}/${d.id}`}>
           <div className='table-row' key={d.id}>
             {keys.map((key, i) => (

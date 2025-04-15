@@ -153,7 +153,7 @@
     border-bottom-right-radius: var(--border-radius-l);
   }
   .cell.working,
-  .cell.\31 {
+  .cell.true {
     background: var(--clr-active);
     border-bottom-right-radius: var(--border-radius-l);
   }

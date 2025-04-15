@@ -2,10 +2,9 @@ const BASE_URL = "http://127.0.0.1:8000/api";
 
 export const getBusinesses = async () => {
   const response = await fetch(`${BASE_URL}/businesses`);
-  if (!response.ok) {
-    console.error('Failed to fetch:', response.statusText);
-    return [];
-  }
+  if (!response.ok) throw new Error('Failed to fetch');
+
+
   const data = await response.json();
   return data.data;
 
@@ -13,9 +12,8 @@ export const getBusinesses = async () => {
 
 export const getSpecificBusinesses = async (name) => {
   const response = await fetch(`${BASE_URL}/businesses/${name}`);
-  if (!response.ok) {
-    console.error('Failed to fetch:', response.statusText);
-  }
+  if (!response.ok) throw new Error(response.statusText);
+
   const data = await response.json();
   return data.data;
 
@@ -34,9 +32,10 @@ export const getCategories = async () => {
 }
 
 
-export const addService = async (name, price, service_info, duration, bulstat) => {
+export const addService = async (newService) => {
 
-  const business_bulstat = bulstat;
+
+
   const response = await fetch(`${BASE_URL}/services`, {
     method: 'POST',
     headers: {
@@ -45,10 +44,11 @@ export const addService = async (name, price, service_info, duration, bulstat) =
       'Accept': 'application/json',
       'Access-Control-Allow-Origin': '*'
     },
-    body: JSON.stringify({ name, price, service_info, duration, business_bulstat }),
-    mode: 'cors'
+    body: JSON.stringify(newService),
 
   });
+
+
   if (!response.ok) {
     return await response.json()
   }
@@ -63,15 +63,14 @@ export const getServices = async () => {
   const response = await fetch(`${BASE_URL}/services`, {
     headers: {
       "Authorization": "Bearer " + sessionStorage.getItem("token"),
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*'
     }
   });
 
-  if (!response.ok) {
-    console.error('Failed to fetch:', response.statusText);
-  }
-  const data = await response.json();
+  if (!response.ok) throw new Error(response.statusText);
 
+  const data = await response.json();
   return data.data;
 
 }
@@ -85,20 +84,44 @@ export const getService = async (id) => {
     }
   });
 
-  if (!response.ok) {
-    console.error('Failed to fetch:', response);
-    return {
-      "text": response.statusText,
-      "code": response.status
-    };
+  if (!response.ok) throw new Error(response.statusText);
 
-  }
   const data = await response.json();
-
   return data.data;
 
 }
 
+export const updateService = async ({ id, ...updatedService }) => {
+
+  const response = await fetch(`${BASE_URL}/services/${id}`, {
+    method: 'PUT',
+    headers: {
+      "Authorization": "Bearer " + sessionStorage.getItem("token"),
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify(updatedService)
+  });
+  if (!response.ok) throw new Error(response.statusText);
+
+  const data = await response.json();
+  return data.data;
+}
+
+export const deleteService = async (id) => {
+  const response = await fetch(`${BASE_URL}/services/${id}`, {
+    method: 'DELETE',
+    headers: {
+      "Authorization": "Bearer " + sessionStorage.getItem("token"),
+    }
+  });
+
+  if (!response.ok) throw new Error(response.statusText);
+
+  const data = await response.json();
+  return data.data;
+}
 
 export const getEmployees = async (bulstat = null) => {
 
@@ -158,7 +181,7 @@ export const addAppointment = async (appointemnt) => {
 
 }
 
-export const getAppointment = async () => {
+export const getAppointments = async () => {
 
 
   const response = await fetch(`${BASE_URL}/appointments`, {
@@ -167,11 +190,10 @@ export const getAppointment = async () => {
       "Content-Type": "application/json"
     }
   });
-  if (!response.ok) {
-    console.error('Failed to fetch:', response.statusText);
-  }
-  const data = await response.json();
+  if (!response.ok) throw new Error('Failed to fetch');
 
+
+  const data = await response.json();
   return data.data;
 }
 
@@ -193,9 +215,8 @@ export const updateProfile = async (id, info) => {
   if (!response.ok) {
     return await response.json()
   }
-  const data = await response.json();
 
-  return data;
+  return await response.json();
 }
 
 
@@ -257,3 +278,21 @@ export const updateBusiness = async (id, business) => {
   return data;
 }
 
+export const loginUser = async ({ email, password }) => {
+
+  const response = await fetch(`${BASE_URL}/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify({ email, password }),
+  });
+  if (!response.ok) throw new Error('Грешни данни за вход');
+
+
+  return await response.json();
+
+
+}

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 use App\Models\Business;
 use App\Models\Employees;
 
@@ -17,8 +18,9 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
+        Log::info('Loing request:', ['request' => $request->all()]);
         $request->validate([
-            'email' => ['required'],
+            'email' => ['required','exists:users,email'],
             'password' => ['required']
         ]);
 
@@ -38,6 +40,7 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        Log::info('Register request:', ['request' => $request->all()]);
         if (
             $request->has('isBusiness')
             && $request->isBusiness
@@ -64,7 +67,7 @@ class AuthController extends Controller
             if (!empty($errors)) {
                 return response()->json(['errors' => $errors], 422);
             }
-
+            $role = 'owner';
             DB::beginTransaction();
             try {
 
@@ -73,19 +76,19 @@ class AuthController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'password' => Hash::make($request->password),
-                    'role' => 'owner'
+                    'role' =>  $role
                 ]);
 
-
+                Log::info('Register user:', ['user' => $user]);
                 $newBusiness['user_id'] = $user['id'];
-
-                $business = Business::create($businessValidator->validated());
-
+               
+                $business = Business::create(  $newBusiness);
+                Log::info('Register business:', ['business' => $business]);
 
                 $user->update(['business_bulstat' => $business['bulstat']]);
 
                 DB::commit();
-                return response()->json(['message' => 'Регистрацията е успешна!'], 201);
+               
             } catch (\Exception $e) {
                 DB::rollBack();
                 return response()->json(['error' => 'Възникна грешка. Моля, опитайте отново.'], 500);
@@ -112,6 +115,7 @@ class AuthController extends Controller
                     'business_bulstat' => $request->bulstat,
                     'status' => 'working'
                 ]);
+                return response()->json('Employee added', 200);
             }
         }
 
@@ -129,7 +133,7 @@ class AuthController extends Controller
                 'business' => $business ?? null
             ], 200);
         }
-        return response()->json('Employee added', 200);
+        
     }
 
     public function logout(Request $request)

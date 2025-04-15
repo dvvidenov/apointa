@@ -41,6 +41,7 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {   
+        Log::info('Created services.', ['services' => $request]);
         $attrs = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'price' => ['required'],
@@ -84,7 +85,7 @@ class ServicesController extends Controller
             'business_bulstat'=> ['required'],
             'status' => ['required'],
             // 'old_price' => ['nullable'],
-            'service_info' => ['nullable|string|max:255']
+            'service_info' => ['nullable','string','max:255']
         ]);
 
 

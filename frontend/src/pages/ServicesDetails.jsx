@@ -1,82 +1,61 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getService } from '../services/api';
+
 import BackButton from "../components/BackButton";
 import Input from "../components/Input";
+import { useDeleteMutaion, useGetServiceQuery, useUpdateServiceMutaion } from "../queries/services";
+import Loader from "../components/Loader";
 
 function ServicesDetails() {
 
   const { id } = useParams();
-  const [service, setService] = useState([]);
+  const { data: service, isLoading, error: errorGet } = useGetServiceQuery(id);
+  const { mutate: updatedService, isPendingUpdate, error: errorUpdate } = useUpdateServiceMutaion();
+  const { mutate: deleteService, isPendingDelete, error: errorDelete } = useDeleteMutaion();
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [duration, setDuration] = useState("");
   const [status, setStatus] = useState(false)
   const [serviceInfo, setServiceInfo] = useState("");
-  // let business_bulstat = '';
-  const navigate = useNavigate();
+
 
   useEffect(() => {
-    const loadServices = async () => {
-      try {
-        const ser = await getService(id)
-        setService(ser);
-      } catch (err) {
-        console.log(err);
-
-      }
-    }
-    loadServices();
-
-  }, [id]);
-
-  useEffect(() => {
-    if (service) {
-      if (service.code) {
-        window.location.href = '/notfound';
-      } else {
+    if (!isLoading) {
+      if (service) {
         setName(service.name || "");
         setPrice(service.price || "");
         setDuration(service.duration || "");
         setStatus(service.status || false);
         setServiceInfo(service.serviceInfo || "");
+      } else {
+        window.location.href = '/notfound';
       }
     }
-  }, [service]);
+  }, [service, isLoading]);
 
-
-  let business_bulstat = service.businessBulstat;
-  let service_info = serviceInfo;
   const handleDelete = (e) => {
     e.preventDefault();
-    fetch('http://localhost:8000/api/services/' + id, {
-      method: 'DELETE',
-      headers: {
-        "Authorization": "Bearer " + sessionStorage.getItem("token"),
-      }
-    }).then(() => {
-      navigate('/services');
+
+    deleteService(id, {
+      retry: 1,
     })
   }
 
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    fetch('http://localhost:8000/api/services/' + id, {
-      method: 'PUT',
-      headers: {
-        "Authorization": "Bearer " + sessionStorage.getItem("token"),
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({ name, price, service_info, duration, business_bulstat, status }),
-    }).then(() => {
-      navigate('/services');
-    })
+    let update = { id, name, price, service_info: serviceInfo, duration, business_bulstat: service.businessBulstat, status };
+
+    updatedService(update);
   }
 
+  if (errorGet || errorUpdate || errorDelete) {
+    return <p className="error-label">{errorGet?.message || errorUpdate?.message || errorDelete?.message}</p>
+  }
 
+  if (isLoading || isPendingUpdate || isPendingDelete) {
+    return <Loader />
+  }
   return (
     <div>
       <BackButton link='services' />

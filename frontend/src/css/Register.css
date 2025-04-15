@@ -17,13 +17,13 @@ label {
 }
 .register-input .business-info {
 	text-align: center;
-
 	padding: 0px;
+	flex-grow: unset !important;
 }
 .register-info {
 	display: flex;
 	margin: auto;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 .register-input h4 {
@@ -106,7 +106,7 @@ label {
   margin: 10px 32px;
 }
 .register-btn.primary-button {
-	max-width: 30%;
+	max-width: 40%;
 }
 @media (max-width: 768px) {
   .register-input {

@@ -55,8 +55,8 @@ function Register() {
     const data = await response.json();
 
     if (response.ok) {
-      sessionStorage.setItem('token', data.token); // Запази токена
-      sessionStorage.setItem('user', JSON.stringify(data.user)); // Запази потребителя
+      sessionStorage.setItem('token', data.token);
+      sessionStorage.setItem('user', JSON.stringify(data.user));
       if (business['bulstat']) {
         sessionStorage.setItem('business', JSON.stringify(data.business));
       }
@@ -77,11 +77,6 @@ function Register() {
           <button className={toggleState === 2 ? "business tab active-tab" : "business tab"} onClick={() => toggleTab(2)}>Фирма</button>
         </div>
         <div className="register-input">
-          {/* {error && Object.keys(error).map((field) => (
-          <p key={field} className="error-label">
-          {error[field][0]}
-          </p>
-          ))} */}
           <div className="form-tabs">
 
             <form className="content active-content">
@@ -91,10 +86,10 @@ function Register() {
 
                   <h4>Лична информация</h4>
                   <div className="devider"></div>
-                  <Input type='text' labelName='Имена' value={name} onChange={(e) => setName(e.target.value)} error={error && error?.user['name'] ? 'error' : ''} />
-                  <Input type='email' labelName='Имейл' value={email} onChange={(e) => setEmail(e.target.value)} pattern=".+@example\.com" error={error && error?.user['email'] ? 'error' : ''} />
-                  <Input type='password' labelName='Парола' value={password} onChange={(e) => setPassword(e.target.value)} error={error && error?.user['password'] ? 'error' : ''} />
-                  <Input type='password' labelName='Потвърждаване на  Парола' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} error={error && error?.user['password'] ? 'error' : ''} />
+                  <Input type='text' labelName='Имена' value={name} onChange={(e) => setName(e.target.value)} error={error && error?.user?.name ? 'error' : ''} />
+                  <Input type='email' labelName='Имейл' value={email} onChange={(e) => setEmail(e.target.value)} pattern=".+@example\.com" error={error && error?.user?.email ? 'error' : ''} />
+                  <Input type='password' labelName='Парола' value={password} onChange={(e) => setPassword(e.target.value)} error={error && error?.user?.password ? 'error' : ''} />
+                  <Input type='password' labelName='Потвърждаване на  Парола' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} error={error && error?.user?.password ? 'error' : ''} />
                 </div>
 
                 {toggleState === 2 ?

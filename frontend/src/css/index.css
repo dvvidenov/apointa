@@ -185,7 +185,7 @@ button {
   text-align: center;
 }
 
-
+.field-select .input-label.error,
 .field .input-label.error{
   color: red;
 }
@@ -218,6 +218,7 @@ button {
 .logo-tag {
 	color: var(--secondary-color);
 	flex-grow: 1;
+	margin: auto;
 }
 
 .field .react-datepicker-wrapper input.error,

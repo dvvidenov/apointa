@@ -1,56 +1,41 @@
 
-import { useState, useEffect } from "react";
-import { addService, getServices } from '../services/api';
+import { useState, } from "react";
 import '../css/Services.css';
 import Table from "../components/Table";
 import Loader from "../components/Loader";
 import Input from "../components/Input";
+import { useServiceMutation, useServicesQuery } from "../queries/services";
 
 
 function Services() {
+
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [duration, setDuration] = useState('');
   const [serviceInfo, setServiceInfo] = useState("");
-  const [services, setServices] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [services, setServices] = useState([]);
+  // const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(true);
   const user = JSON.parse(sessionStorage.getItem('user'));
 
 
 
-  const bulstat = user.business_bulstat;
-  useEffect(() => {
-    const loadServices = async () => {
-      try {
-        const ser = await getServices()
-        setServices(ser);
-      } catch (err) {
-        setError(err);
+  const { mutate: add, isPending, error } = useServiceMutation();
+  const { data: services, isLoading, refetch } = useServicesQuery();
 
-      } finally {
-        setLoading(false)
-      }
-    }
-    loadServices();
-
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let service_info = serviceInfo;
 
-    const newService = await addService(name, price, service_info, duration, bulstat);
+    let newService = { name, price, service_info: serviceInfo, duration, business_bulstat: user.business_bulstat };
+    add(newService);
+    refetch
 
-    if (newService.data) {
-      window.location.href = '/services';
-    } else {
-      const errorData = newService;
-      setError(errorData.errors);
-
-    }
   }
 
+  if (isLoading || isPending) {
+    return <Loader />
+  }
 
   const labels = ["Име на услугата", "Продължителност (в минути)", "Цена (в лева)", "Статус"];
   const keys = ["name", "duration", "price", "status"];
@@ -62,17 +47,15 @@ function Services() {
           {error[field][0]}
         </p>
       ))}
-      {loading ? <Loader /> :
-
-
+      {
         services &&
         <div className="services">
           <details>
             <summary>Добави нова услуга</summary>
             <form className={`add-new-service`}>
-              <Input type='text' labelName='Име' value={name} onChange={(e) => setName(e.target.value)} error={error['name']?'error':''}/>
-              <Input type='text' labelName='Цена' value={price} onChange={(e) => setPrice(e.target.value)} error={error['price']?'error':''}/>
-              <Input type='text' labelName='Продължителност (в минути)' value={duration} onChange={(e) => setDuration(e.target.value)} error={error['duration']?'error':''}/>
+              <Input type='text' labelName='Име' value={name} onChange={(e) => setName(e.target.value)} error={error && error?.name ? 'error' : ''} />
+              <Input type='text' labelName='Цена' value={price} onChange={(e) => setPrice(e.target.value)} error={error && error?.price ? 'error' : ''} />
+              <Input type='text' labelName='Продължителност (в минути)' value={duration} onChange={(e) => setDuration(e.target.value)} error={error && error?.duration ? 'error' : ''} />
               <div className="field">
                 <label className="input-label">Информация за услугата</label>
                 <textarea
