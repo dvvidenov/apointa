@@ -19,7 +19,7 @@ function ProfileUpdate() {
   const [address, setaddress] = useState(business?.address);
   const [city, setCity] = useState(business?.city);
   const [businessPhone, setBusinessPhone] = useState(business?.phone);
-  const [businessInfo, setBusinessInfo] = useState(business?.business_info);
+  const [businessInfo, setBusinessInfo] = useState(business?.business_info || '');
   const [posPayment, setPosPayment] = useState(business?.pos_payment);
   const [image, setImage] = useState(null);
 
@@ -69,7 +69,8 @@ function ProfileUpdate() {
 
   }
 
-  
+
+
   return (
     <>
       <BackButton link='profile' />
@@ -79,20 +80,20 @@ function ProfileUpdate() {
 
 
 
-        <form className='update-service'>
+        <form className='update-service' onSubmit={handleSubmit}>
           {!business &&
             <>
               <Input type='text' labelName='Имена' value={name} onChange={(e) => setName(e.target.value)} error={error && error['name'] ? 'error' : ''} />
-              <Input type='email' labelName='Имейл' value={email} onChange={(e) => setEmail(e.target.value)} pattern=".+@example\.com" error={error && error['email'] ? 'error' : ''}/>
-              <Input type='text' labelName='Телефон за контакт' value={phone ?? ''} onChange={(e) => setPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''}/>
+              <Input type='email' labelName='Имейл' value={email} pattern="^+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onChange={(e) => setEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
+              <Input type='text' labelName='Телефон за контакт' value={phone ?? ''} onChange={(e) => setPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''} />
             </>
           }
           {business &&
             <div>
-              <Input type='text' labelName='Адрес на обекта' value={address} onChange={(e) => setaddress(e.target.value)} error={error && error['address'] ? 'error' : ''}/>
-              <Input type='text' labelName='Град' value={city} onChange={(e) => setCity(e.target.value)} error={error && error['city'] ? 'error' : ''}/>
-              <Input type='text' labelName='Телефон за връзка с обекта' value={businessPhone} onChange={(e) => setBusinessPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''}/>
-              <Input type='email' labelName='Имейл' value={businessEmail} onChange={(e) => setBusinessEmail(e.target.value)} pattern=".+@example\.com" error={error && error['email'] ? 'error' : ''}/>
+              <Input type='text' labelName='Адрес на обекта' value={address} onChange={(e) => setaddress(e.target.value)} error={error && error['address'] ? 'error' : ''} />
+              <Input type='text' labelName='Град' value={city} onChange={(e) => setCity(e.target.value)} error={error && error['city'] ? 'error' : ''} />
+              <Input type='text' labelName='Телефон за връзка с обекта' value={businessPhone} pattern="^(?:\+359|0)[89]{1}\d{8}$" onChange={(e) => setBusinessPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''} />
+              <Input type='email' labelName='Имейл' value={businessEmail} pattern="^+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onChange={(e) => setBusinessEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
               <div className="field">
                 <label className="input-label">Кратка интродукция на фирмата</label>
                 <textarea
@@ -108,9 +109,8 @@ function ProfileUpdate() {
                     <input
                       type="checkbox"
                       id="pos-payment"
-                      value={posPayment}
                       checked={posPayment}
-                      onChange={(e) => setPosPayment(e.target.value)}
+                      onChange={(e) => setPosPayment(e.target.checked)}
                     />
                   </label>
                 </div>
@@ -121,7 +121,7 @@ function ProfileUpdate() {
               </div>
             </div>
           }
-          <button className="primary-button" onClick={handleSubmit}>Обнови</button>
+          <button className="primary-button" type="submit">Обнови</button>
         </form >
 
       )

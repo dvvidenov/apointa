@@ -1,5 +1,5 @@
-const Input = ({ type, labelName, value, onChange, pattern = '' , isDisabled=false ,error=''}) => {
-  
+const Input = ({ type, labelName, value, onChange, pattern = undefined, isDisabled = false, error = '' }) => {
+
   return (
 
     <div className="field">
@@ -7,7 +7,7 @@ const Input = ({ type, labelName, value, onChange, pattern = '' , isDisabled=fal
       <input
         className={`input ${error}`}
         type={type}
-        required
+        required={true}
         pattern={pattern}
         value={value}
         onChange={onChange}

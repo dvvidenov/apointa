@@ -1,42 +1,29 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import BackButton from "../components/BackButton";
+import { useEmployeeDeleteMutation, useEmployeeUpdateMutation } from "../queries/employees";
+import Loader from "../components/Loader";
 
 function EmployeeEdit() {
   const { id } = useParams();
   const employees = JSON.parse(sessionStorage.getItem('employees'));
   const employee = employees.find(emp => emp.id == id);
-  const navigate = useNavigate();
-  const [status, setStatus] = useState(employee.status);
 
+  const [status, setStatus] = useState(employee.status);
+  const { mutate: updateEmployee, isPendingU } = useEmployeeUpdateMutation();
+  const { mutate: deleteEmployee, isPendingD } = useEmployeeDeleteMutation();
   const handleDelete = (e) => {
     e.preventDefault();
-    fetch('http://localhost:8000/api/employees/' + id, {
-      method: 'DELETE',
-      headers: {
-        "Authorization": "Bearer " + sessionStorage.getItem("token"),
-      }
-    }).then(() => {
-      navigate('/employees');
-    })
+    deleteEmployee( id );
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch('http://localhost:8000/api/employees/' + id, {
-      method: 'PUT',
-      headers: {
-        "Authorization": "Bearer " + sessionStorage.getItem("token"),
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({  status }),
-    }).then(() => {
-      navigate('/employees');
-    })
+    updateEmployee({ id: id, status });
   }
-
+  if (isPendingU || isPendingD) {
+    return <Loader />
+  }
 
   return (
     <>
