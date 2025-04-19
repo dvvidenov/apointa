@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
@@ -17,10 +18,11 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         Log::info('Update profile:', ['Request' => $request]);
+        Log::info('Update profile:', ['User' => $user]);
         $attrs = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['numeric', 'min:10'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email',  Rule::unique('users')->ignore($user['id'])],
         ]);
 
         $user->update($attrs);
