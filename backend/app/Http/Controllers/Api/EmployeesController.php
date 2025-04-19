@@ -20,7 +20,7 @@ class EmployeesController extends Controller
         
         $user = $request->user();
        
-        $business = Business::where('bulstat', $user->business_bulstat??$request->bulstat)->first();
+        $business = Business::where('bulstat',$request->bulstat?? $user->business_bulstat)->first();
 
         if (!$business) {
             return response()->json(['message' => 'Business not found'], 404);

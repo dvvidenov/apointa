@@ -20,9 +20,9 @@ class AppointmentsController extends Controller
     public function index(Request $request) {
         
         $user = $request->user();
-       
         if($user->role == 'owner'){
             $business = Business::where('bulstat', $user->business_bulstat)->first();
+            Log::info(' Business appointments.', ['business' => $business->appointments]);
             return AppointmentsResource::collection($business->appointments);
         }
 

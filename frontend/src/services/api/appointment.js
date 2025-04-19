@@ -1,12 +1,15 @@
 import { BASE_URL } from './config';
 
 export const addAppointment = async (appointemnt) => {
-
+  console.log(appointemnt);
+  
   const response = await fetch(`${BASE_URL}/appointments`, {
     method: 'POST',
     headers: {
       "Authorization": "Bearer " + sessionStorage.getItem("token"),
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      'Accept': 'application/json',
+      "Access-Control-Allow-Origin": '*'
     },
     body: JSON.stringify(appointemnt)
   });
@@ -32,7 +35,7 @@ export const getAppointments = async () => {
   if (!response.ok) throw new Error('Failed to fetch');
 
 
-  const data = await response.json(); 
+  const data = await response.json();
   return data.data;
 }
 
@@ -40,11 +43,9 @@ export const getAppointments = async () => {
 
 
 
-export const updateAppointment = async (id, appt) => {
-
-
-
-  const response = await fetch(`${BASE_URL}/appointments/` + id, {
+export const updateAppointment = async ({ id, ...appt }) => {
+  
+  const response = await fetch(`${BASE_URL}/appointments/${id}`, {
     method: 'PUT',
     headers: {
       "Authorization": "Bearer " + sessionStorage.getItem("token"),

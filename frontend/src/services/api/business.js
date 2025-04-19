@@ -21,7 +21,7 @@ export const getSpecificBusinesses = async (name) => {
 
 
 
-export const updateBusiness = async (id, business) => {
+export const updateBusiness = async ({id, ...business}) => {
 
   const formData = new FormData();
   formData.append('email', business.email);
@@ -41,7 +41,7 @@ export const updateBusiness = async (id, business) => {
   }
 
 
-  const response = await fetch(`${BASE_URL}/businesses/` + id, {
+  const response = await fetch(`${BASE_URL}/businesses/${id}`, {
     method: 'POST',
     headers: {
       "Authorization": "Bearer " + sessionStorage.getItem("token"),

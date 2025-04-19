@@ -3,11 +3,12 @@ import { deleteEmployee, getEmployees, registerEmployee, updateEmployee } from "
 
 import { useNavigate } from 'react-router-dom';
 
-export const useEmployeesQuery = () =>
+export const useEmployeesQuery = (bulstat) =>
   useQuery({
-    queryKey: ['employees'],
-    queryFn: getEmployees,
-    staleTime: Infinity,
+    queryKey: ['employees',  bulstat ],
+    queryFn: () => getEmployees(bulstat),
+    retry: 1,
+    enabled: !!bulstat 
   });
 
 export const useEmployeeRegisterMutation = () => {

@@ -1,29 +1,33 @@
 import { useParams, } from "react-router-dom";
 import { useState } from "react";
 import BackButton from "../../components/ui/BackButton";
-import { updateAppointment } from "../../services/api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useUpdateAppointmentMutation } from "../../queries/appointments";
+import Loader from "../../components/ui/Loader";
 
 function AppointmentEdit() {
   const { id } = useParams();
   const appointment = JSON.parse(sessionStorage.getItem('appointments')).find(appm => appm.id == id);
 
   const [status, setStatus] = useState(appointment.status);
-  // const [date, setDate] = useState(appointment.appointmentDate);
+
   const today = new Date();
 
   const [startDate, setStartDate] = useState(appointment.appointmentDate);
 
+  const { mutate: updateAppointment, isPending } = useUpdateAppointmentMutation();
+
   const handleSubmit = async (e) => {
     let appointmentDate = startDate.toLocaleDateString('en');
     e.preventDefault();
-    await updateAppointment(id, { appointmentDate, status });
-
+    updateAppointment({ id, appointmentDate, status })
     window.location.href = '/appointments';
 
   }
-
+  if (isPending) {
+    return <Loader />
+  }
   return (
     <>
       <BackButton link='appointments' />

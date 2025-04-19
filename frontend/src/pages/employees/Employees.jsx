@@ -6,8 +6,8 @@ import Loader from "../../components/ui/Loader";
 import { useEmployeesQuery } from "../../queries/employees";
 
 function Employees() {
-
-  const { data: employees, isLoading, error } = useEmployeesQuery();
+  const business = JSON.parse(sessionStorage.getItem('business'));
+  const { data: employees, isLoading, error } = useEmployeesQuery(business.bulstat);
 
   
   if (isLoading) {

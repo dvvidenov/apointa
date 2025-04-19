@@ -22,7 +22,8 @@ function Appointments() {
   if (isLoading) {
     return <Loader />;
   }
-  console.log(appointments.length);
+
+  console.log(appointments);
   
  
   sessionStorage.setItem('appointments', JSON.stringify(appointments))

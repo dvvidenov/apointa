@@ -22,6 +22,8 @@ import EmployeeEdit from './pages/employees/EmployeeEdit'
 import CookiesAndPolices from './pages/legal/CookiesAndPolices'
 import NotFound from './pages/NotFound'
 import SuccessRegistration from './components/shared/SuccessRegistration'
+import SuccessAppointment from './components/shared/SuccessAppointment'
+
 
 
 function App() {
@@ -50,6 +52,7 @@ function App() {
           <Route path='/employees/:id' element={<EmployeeEdit />} />
           <Route path='/employees/new' element={<NewEmployee />} />
           <Route path='/success-registration' element={<SuccessRegistration />} />
+          <Route path='/success-appointment' element={<SuccessAppointment />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
