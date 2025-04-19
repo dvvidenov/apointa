@@ -1,13 +1,14 @@
 import BackButton from "../../components/ui/BackButton";
 import Loader from "../../components/ui/Loader";
 import Input from "../../components/ui/Input";
-import { updateProfile, updateBusiness } from "../../services/api";
 import { useState } from "react";
+import { useUpdateBusinessMutation } from "../../queries/business";
+import { useUpdateProfileMutation } from "../../queries/user";
 
 
 function ProfileUpdate() {
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+
   const user = JSON.parse(sessionStorage.getItem('user'));
   const business = JSON.parse(sessionStorage.getItem('business'));
 
@@ -24,68 +25,64 @@ function ProfileUpdate() {
   const [posPayment, setPosPayment] = useState(business?.pos_payment);
   const [image, setImage] = useState(null);
 
-
-
+  const { mutate: updateBusiness, isPendingB, errorB, isErrorB } = useUpdateBusinessMutation();
+  const { mutate: updateProfile, isPendingU, errorU, isErrorU } = useUpdateProfileMutation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+
     if (business && user.role == 'owner') {
-      let phone = businessPhone;
-      let email = businessEmail;
-      let pos_payment = posPayment;
-      let business_info = businessInfo;
+      updateBusiness({
+        id: business.slug,
+        address,
+        city,
+        phone: businessPhone,
+        email: businessEmail,
+        pos_payment: posPayment,
+        image,
+        business_info: businessInfo
 
-      const updatedBusiness = await updateBusiness(business.slug,
-        {
-          address,
-          city,
-          phone,
-          email,
-          pos_payment,
-          image,
-          business_info
-        });
-      if (updatedBusiness.data) {
+      }, {
+        onSuccess: (data) => {
+          sessionStorage.setItem('business', JSON.stringify(data.business));
+          window.location.href = '/profile';
 
-        sessionStorage.setItem('business', JSON.stringify(updatedBusiness.business));
-
-        window.location.href = '/profile';
-
-
-      } else {
-        setError(updatedBusiness.errors);
-        setLoading(false);
-      }
+        },
+      });
 
     } else {
-      const updatedProfile = await updateProfile(user.id, { name, email, phone });
-      if (updatedProfile.data) {
-        sessionStorage.setItem('user', JSON.stringify(updatedProfile));
-        window.location.href = '/profile';
-      } else {
-        setError(updatedProfile.errors);
-      }
+      updateProfile({
+        id: user.id,
+        name,
+        email,
+        phone
+      }, {
+        onSuccess: (data) => {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          window.location.href = '/profile';
+
+        },
+      })
     }
 
   }
 
-
-
+  if (isPendingB || isPendingU) {
+    return <Loader />
+  }
+  if ((isErrorB || isErrorU) && (errorB || errorU)) {
+    setError(errorB ?? errorU);
+  }
   return (
     <>
       <BackButton link='profile' />
       <h2 className="page-title">Обновяване на профил</h2>
-      {loading ? <Loader /> : (
-
-
-
-
+      {
         <form className='update-service' onSubmit={handleSubmit}>
           {!business &&
             <>
               <Input type='text' labelName='Имена' value={name} onChange={(e) => setName(e.target.value)} error={error && error['name'] ? 'error' : ''} />
-              <Input type='email' labelName='Имейл' value={email} pattern="^+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onChange={(e) => setEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
+              <Input type='email' labelName='Имейл' value={email} onChange={(e) => setEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
               <Input type='text' labelName='Телефон за контакт' value={phone ?? ''} onChange={(e) => setPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''} />
             </>
           }
@@ -94,7 +91,7 @@ function ProfileUpdate() {
               <Input type='text' labelName='Адрес на обекта' value={address} onChange={(e) => setaddress(e.target.value)} error={error && error['address'] ? 'error' : ''} />
               <Input type='text' labelName='Град' value={city} onChange={(e) => setCity(e.target.value)} error={error && error['city'] ? 'error' : ''} />
               <Input type='text' labelName='Телефон за връзка с обекта' value={businessPhone} pattern="^(?:\+359|0)[89]{1}\d{8}$" onChange={(e) => setBusinessPhone(e.target.value)} error={error && error['phone'] ? 'error' : ''} />
-              <Input type='email' labelName='Имейл' value={businessEmail} pattern="^+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onChange={(e) => setBusinessEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
+              <Input type='email' labelName='Имейл' value={businessEmail} onChange={(e) => setBusinessEmail(e.target.value)} error={error && error['email'] ? 'error' : ''} />
               <div className="field">
                 <label className="input-label">Кратка интродукция на фирмата</label>
                 <textarea
@@ -124,8 +121,6 @@ function ProfileUpdate() {
           }
           <button className="primary-button" type="submit">Обнови</button>
         </form >
-
-      )
       }
     </>
   );

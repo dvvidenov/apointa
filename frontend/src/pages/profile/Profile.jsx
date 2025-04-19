@@ -7,7 +7,8 @@ import '../../css/Profile.css';
 function Profile() {
   const user = JSON.parse(sessionStorage.getItem('user'));
   const business = JSON.parse(sessionStorage.getItem('business'));
-
+  console.log(business);
+  
   
   return (
     <>

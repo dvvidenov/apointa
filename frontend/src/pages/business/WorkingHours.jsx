@@ -2,11 +2,13 @@ import BackButton from "../../components/ui/BackButton";
 import Input from "../../components/ui/Input";
 import { useState } from "react";
 import '../../css/WorkingHours.css'
-import { updateBusiness } from "../../services/api";
+import Loader from "../../components/ui/Loader";
+import { useUpdateBusinessMutation } from "../../queries/business";
 
 
 function WorkingHours() {
   const business = JSON.parse(sessionStorage.getItem('business'));
+  const { mutate: updateBusiness, isPending, data: updatedBusiness, isSuccess } = useUpdateBusinessMutation();
   const daysOfWeekMap = [
     { key: "monday", label: "Понеделник" },
     { key: "tuesday", label: "Вторник" },
@@ -31,7 +33,7 @@ function WorkingHours() {
     if (/^[0-9:]*$/.test(value) || field == "closed") {
       setWorkingHours((prev) => ({
         ...prev,
-        [day]: { ...prev[day], [field]:value },
+        [day]: { ...prev[day], [field]: value },
       }));
     }
   };
@@ -43,19 +45,15 @@ function WorkingHours() {
       working_hours: JSON.stringify(workingHours),
     };
     delete businessToSend.image;
-
-
-    const updatedBusiness = await updateBusiness(business.slug, { ...businessToSend })
-    if (updatedBusiness) {
-      sessionStorage.setItem('business', JSON.stringify(updatedBusiness.business));
-      window.location.href = '/profile';
-    } else {
-      console.error("Failed to update");
-
-    }
-
+    updateBusiness({ id: business.slug, ...businessToSend })
   }
-
+  if (isSuccess) {
+    sessionStorage.setItem('business', JSON.stringify(updatedBusiness.business));
+    window.location.href = '/profile';
+  }
+  if (isPending) {
+    return <Loader />
+  }
 
 
   return (
@@ -68,7 +66,7 @@ function WorkingHours() {
             <span className="day-of-week">{day.label}:</span>
             <div className="day-input">
               <Input type='text' labelName="Начало" value={workingHours[day.key].start || ""} onChange={(e) => handleChange(day.key, "start", e.target.value)} isDisabled={workingHours[day.key].closed} />
-              <Input type='text'labelName="Край" value={workingHours[day.key].end || ""} onChange={(e) => handleChange(day.key, "end", e.target.value)} isDisabled={workingHours[day.key].closed} />
+              <Input type='text' labelName="Край" value={workingHours[day.key].end || ""} onChange={(e) => handleChange(day.key, "end", e.target.value)} isDisabled={workingHours[day.key].closed} />
 
               <div className="field-checkbox">
                 <label className="day-off">

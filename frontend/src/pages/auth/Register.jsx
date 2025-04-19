@@ -4,14 +4,15 @@ import Input from "../../components/ui/Input";
 import Loader from "../../components/ui/Loader";
 import BusinessRegistrationCard from "../../components/shared/BuinessRegistrationCard";
 import '../../css/Register.css';
+import { useRegisterMutation } from "../../queries/user";
 function Register() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState(null);
-  const [isPending, setIsPending] = useState(false);
+  // const [error, setError] = useState(null);
+  // const [isPending, setIsPending] = useState(false);
   const [businessData, setBusinessData] = useState({});
 
 
@@ -24,10 +25,11 @@ function Register() {
     setBusinessData(info);
   }, []);
 
+  const { mutate: register, isPending, error, isError } = useRegisterMutation();
   let business = businessData;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsPending(true);
+    // setIsPending(true);
     let password_confirmation = confirmPassword;
     let isBusiness = toggleState === 1 ? false : true;
 
@@ -38,38 +40,38 @@ function Register() {
     if (toggleState === 1) {
       delete sendData.business;
     }
+    register({ sendData }, {
+      retry: 1,
+      onSuccess: (data) => {
+        console.log(data);
 
-    const response = await fetch('http://localhost:8000/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        sessionStorage.setItem('token', data.token);
+        sessionStorage.setItem('user', JSON.stringify(data.user));
+        if (data.business) {
+          sessionStorage.setItem('business', JSON.stringify(data.business));
+        }
+
+        window.location.href = '/success-registration';
+
       },
-      body: JSON.stringify(sendData),
-      mode: 'cors'
 
     });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      sessionStorage.setItem('token', data.token);
-      sessionStorage.setItem('user', JSON.stringify(data.user));
-      if (business['bulstat']) {
-        sessionStorage.setItem('business', JSON.stringify(data.business));
-      }
-      window.location.href = '/success-registration';
-    } else {
-      setError(data.errors);
-      setIsPending(false);
-
-    }
   }
 
+
+
+
+  if (isPending) {
+    return <Loader />
+  }
   return (
     <>
       <BackButton link='login' />
+      {isError && Object.keys(error).map((field) => (
+        <p key={field} className="error-label">
+          {error[field][0]}
+        </p>
+      ))}
       <div className="register">
         <div className="tabs">
           <button className={toggleState === 1 ? "client tab active-tab " : "client tab"} onClick={() => toggleTab(1)}>Клиент</button>

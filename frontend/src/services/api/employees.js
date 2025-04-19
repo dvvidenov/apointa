@@ -8,7 +8,8 @@ export const getEmployees = async (bulstat = null) => {
     url += `?bulstat=${bulstat}`;
   }
 
-
+  console.log(bulstat);
+  
   const response = await fetch(url, {
     headers: {
       "Authorization": "Bearer " + sessionStorage.getItem("token"),

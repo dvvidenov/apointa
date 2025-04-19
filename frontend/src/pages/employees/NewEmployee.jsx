@@ -42,7 +42,7 @@ function NewEmployee() {
         <h4>Лична информация</h4>
         <div className="devider"></div>
         <Input type='text' labelName='Имена' value={name} onChange={(e) => setName(e.target.value)} error={error?.name ? 'error' : ''} />
-        <Input type='email' labelName='Имейл' value={email} pattern="^+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onChange={(e) =>  setEmail(e.target.value)} error={error?.email ? 'error' : ''} />
+        <Input type='email' labelName='Имейл' value={email} onChange={(e) =>  setEmail(e.target.value)} error={error?.email ? 'error' : ''} />
         <Input type='text' labelName='Телефон за контакт' value={phone ?? ''} pattern="^(?:\+359|0)[89]{1}\d{8}$" onChange={(e) => setPhone(e.target.value)} error={error?.phone ? 'error' : ''} />
         <Input type='password' labelName='Парола' value={password} onChange={(e) => setPassword(e.target.value)} error={error?.password ? 'error' : ''} />
         <Input type='password' labelName='Потвърждаване на  Парола' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} error={error?.password ? 'error' : ''} />
